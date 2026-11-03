@@ -1,0 +1,9 @@
+project: savantenvs/hyperscan
+target: fuzz_deserialize_scan
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_deserialize_scan/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_deserialize_scan
+    libfuzzer: true
+    timeout: 5
